@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void newDonor (int nd);
+void returnDonor (int rd);
+int donorID ();
+
+char emailAddress[100], password[100];
+
+int main()
+{
+    int nd[100][100], rd[100][100];
+    int choice1;
+    printf("\t\t\t\t==========   =========       =========\n");
+    printf("\t\t\t\t==========   ==========   ==========\n");
+    printf("\t\t\t\t===          ===    ===   ====     \n");
+    printf("\t\t\t\t==========   ===    ===   =======\n");
+    printf("\t\t\t\t==========   ===    ===     ========\n");
+    printf("\t\t\t\t===          ===    ===        ======\n");
+    printf("\t\t\t\t===          ===    ===          ====\n");
+    printf("\t\t\t\t==========   ==========   ===========\n");
+    printf("\t\t\t\t==========   =========   ==========\n\n\n");
+    printf("\t\t\t\t\t=====JOIN US====\n\n");
+    menu:
+    printf("\t\t\t\t\t1. New Donor\n");
+    printf("\t\t\t\t\t2. Returning DOnor\n");
+    printf("\t\t\t\t\t3. Exit\n\n");
+    printf("\t\t\t\tChoose a number to perform: ");
+    scanf("%d", &choice1);
+
+    switch (choice1)
+    {
+    case 1:
+        newDonor(nd);
+        goto menu;
+    case 2:
+        returnDonor(rd);
+        goto menu;
+    case 3:
+        exit(0);
+    }
+    return 0;
+}
+
+int donorID ()
+{
+    int id;
+    id=1;
+    id++
+    return id;
+}
+
+void newDonor (int nd)
+{
+    char name[100], buildingStreet[100], barangayCityProvince[100], userName[100], confirmPassword[100];
+    int zip, mobileNumber, age;
+    printf("Registration\n");
+    printf("Your Name: ");
+    scanf("%s", &name);
+    gets(name);
+    printf("Age: ");
+    scanf("%d", &age);
+    //gets(age);
+   // printf("Middle Name (0 if not applicable): ");
+    //scanf("%s", &middleName);
+    //printf("Last Name: ");
+    //canf("%s", &lastName);
+    printf("Email Address: ");
+    scanf("%s", &emailAddress);
+    gets(emailAddress);
+    printf("Mobile Number: ");
+    scanf("%d", &mobileNumber);
+    //gets(mobileNumber);
+    printf("Building/Street: ");
+    scanf("%s", &buildingStreet);
+    gets(buildingStreet);
+    printf("Barangay/City/Province: ");
+    scanf("%s", &barangayCityProvince);
+    gets(barangayCityProvince);
+    printf("Zip Code: ");
+    scanf("%d", &zip);
+    //gets(zip);
+    printf("Password: ");
+    scanf("%s", &password);
+    gets(password);
+    printf("Confirm Password: ");
+    scanf("%s", &confirmPassword);
+    gets(confirmPassword);
+
+    printf("\nAccount created succcessfully.\n\n");
+    printf("Age: %d\n", age);
+    printf("Email Address: %s\n", emailAddress);
+    printf("Donor ID: %d\n", donorID);
+}
+
+void returnDonor (int rd)
+{
+    char forgotPassword;
+    printf("Email Address: ");
+    scanf("%s", &emailAddress);
+    printf("Password: ");
+    scanf("%s", &password);
+    printf("\t\tForgot Password?(y/n): ");
+    scanf("%c", forgotPassword);
+
+    /*if (forgotPassword==y)
+    {
+        goto profile/display enter username, enter new password
+    }*/
+}
